@@ -1,7 +1,7 @@
 create DATABASE EVENTMANAGEMENT;
 use EVENTMANAGEMENT;
 
--- 1. Users Table
+
 CREATE TABLE Users (
     user_id INT PRIMARY KEY AUTO_INCREMENT,
     full_name VARCHAR(100) NOT NULL,
@@ -10,7 +10,7 @@ CREATE TABLE Users (
     registration_date DATE NOT NULL
 );
 
--- 2. Events Table
+
 CREATE TABLE Events (
     event_id INT PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(200) NOT NULL,
@@ -25,7 +25,7 @@ CREATE TABLE Events (
         ON UPDATE CASCADE
 );
 
--- 3. Sessions Table
+
 CREATE TABLE Sessions (
     session_id INT PRIMARY KEY AUTO_INCREMENT,
     event_id INT,
@@ -38,7 +38,7 @@ CREATE TABLE Sessions (
         ON UPDATE CASCADE
 );
 
--- 4. Registrations Table
+
 CREATE TABLE Registrations (
     registration_id INT PRIMARY KEY AUTO_INCREMENT,
     user_id INT,
@@ -52,7 +52,7 @@ CREATE TABLE Registrations (
         ON UPDATE CASCADE
 );
 
--- 5. Feedback Table
+
 CREATE TABLE Feedback (
     feedback_id INT PRIMARY KEY AUTO_INCREMENT,
     user_id INT,
@@ -68,7 +68,7 @@ CREATE TABLE Feedback (
         ON UPDATE CASCADE
 );
 
--- 6. Resources Table
+
 CREATE TABLE Resources (
     resource_id INT PRIMARY KEY AUTO_INCREMENT,
     event_id INT,
